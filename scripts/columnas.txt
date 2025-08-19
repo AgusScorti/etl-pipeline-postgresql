@@ -1,0 +1,89 @@
+Columnas de CanalDeVenta.csv:
+CODIGO
+DESCRIPCION
+
+Columnas de Clientes.csv:
+ID
+Provincia
+Nombre_y_Apellido
+Domicilio
+Telefono
+Edad
+Localidad
+X
+Y
+Fecha_Alta
+Usuario_Alta
+Fecha_Ultima_Modificacion
+Usuario_Ultima_Modificacion
+Marca_Baja
+col10
+
+Columnas de Clientes_bkp.csv:
+ID
+Provincia
+Nombre_y_Apellido
+Domicilio
+Telefono
+Edad
+Localidad
+X
+Y
+col10
+
+Columnas de Compra.csv:
+IdCompra
+Fecha
+IdProducto
+Cantidad
+Precio
+IdProveedor
+
+Columnas de Gasto.csv:
+IdGasto
+IdSucursal
+IdTipoGasto
+Fecha
+Monto
+
+Columnas de Productos.csv:
+ID_PRODUCTO
+Concepto
+Tipo
+Precio
+
+Columnas de Proveedores.csv:
+IDProveedor
+Nombre
+Address
+City
+State
+Country
+departamen
+
+Columnas de Sucursales.csv:
+ID
+Sucursal
+Direccion
+Localidad
+Provincia
+Latitud
+Longitud
+
+Columnas de TiposDeGasto.csv:
+IdTipoGasto
+Descripcion
+Monto_Aproximado
+
+Columnas de Venta.csv:
+IdVenta
+Fecha
+Fecha_Entrega
+IdCanal
+IdCliente
+IdSucursal
+IdEmpleado
+IdProducto
+Precio
+Cantidad
+
