@@ -40,6 +40,9 @@ etl-pipeline-postgresql/
 │   ├── delimitador.py       # Normaliza delimitadores
 │   ├── to_csv.py            # Convierte Excel a CSV
 │
+├── 1-creacion_tablas.sql    # Script para crear tablas en el esquema RAW
+├── 2-ingesta_tablas.sql     # Script para cargar datos en las tablas RAW
+│
 ├── docker-compose.yaml      # Levanta PostgreSQL y pgAdmin
 ├── README.md                # Documentación del proyecto
 └── requirements.txt         # Dependencias Python (opcional)
@@ -111,7 +114,15 @@ etl-pipeline-postgresql/
   ```
 
 - **Carga inicial en base de datos RAW:**  
-  Próximamente, todos los archivos CSV serán cargados en una base de datos RAW en PostgreSQL utilizando pgAdmin. Esta base almacena los datos tal como llegan, sin modificaciones, para asegurar la trazabilidad y facilitar auditorías.
+  La carga de los archivos CSV en la base de datos RAW se realizó en las siguientes etapas:
+
+  1. **[Creación de tablas](1-creacion_tablas.sql):**  
+     Se crearon las tablas en el esquema `raw` utilizando el script `1-creacion_tablas.sql`.
+
+  2. **[Ingesta de datos](2-ingesta_tablas.sql):**  
+     Se cargaron los datos desde los archivos CSV a las tablas creadas utilizando el script `2-ingesta_tablas.sql`.
+
+  En esta base se almacenan los datos tal como llegan, sin modificaciones, para asegurar la trazabilidad y facilitar auditorías.
 
 ### 2. Transformación
 

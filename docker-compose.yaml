@@ -6,12 +6,11 @@ services:
       DATABASE_HOST: 127.0.0.1
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: root
     ports:
       - "5432:5432"
     volumes:
       - ./data:/var/lib/postgresql/data # <-- agrega esta línea
-      - ./import:/import # <-- agrega esta línea
+      - ./import/output:/import # <-- agrega esta línea
 
   pgadmin:
     image: dpage/pgadmin4:latest

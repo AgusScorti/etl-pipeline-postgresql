@@ -19,17 +19,6 @@ Usuario_Ultima_Modificacion
 Marca_Baja
 col10
 
-Columnas de Clientes_bkp.csv:
-ID
-Provincia
-Nombre_y_Apellido
-Domicilio
-Telefono
-Edad
-Localidad
-X
-Y
-col10
 
 Columnas de Compra.csv:
 IdCompra
