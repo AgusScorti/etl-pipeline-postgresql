@@ -1,23 +1,23 @@
 Columnas de CanalDeVenta.csv:
-CODIGO
-DESCRIPCION
+idCanal
+Descripción
 
 Columnas de Clientes.csv:
-ID
-Provincia
-Nombre_y_Apellido
-Domicilio
-Telefono
-Edad
-Localidad
-X
-Y
+idCliente
+provincia
+nombre_y_apellido
+domicilo
+telefono
+edad
+localidad
+longitud
+latitud
 Fecha_Alta
 Usuario_Alta
 Fecha_Ultima_Modificacion
 Usuario_Ultima_Modificacion
 Marca_Baja
-col10
+col10 (se elimina)
 
 
 Columnas de Compra.csv:
@@ -36,22 +36,22 @@ Fecha
 Monto
 
 Columnas de Productos.csv:
-ID_PRODUCTO
+idProducto
 Concepto
 Tipo
 Precio
 
 Columnas de Proveedores.csv:
-IDProveedor
+idProveedor
 Nombre
-Address
-City
-State
-Country
-departamen
+direccion
+ciudad
+estado
+pais
+departamento
 
 Columnas de Sucursales.csv:
-ID
+idSucursal
 Sucursal
 Direccion
 Localidad
