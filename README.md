@@ -127,12 +127,25 @@ etl-pipeline-postgresql/
 ### 2. Transformación
 
 - **Procesamiento en base de datos STAGING:**  
-  Los datos de la base RAW se migran a una base STAGING, donde se realiza la limpieza, transformación y normalización de las tablas.  
-  Ejemplos de transformación:
-  - Limpieza de valores nulos o inconsistentes
-  - Conversión de tipos de datos
-  - Normalización de nombres y formatos
-  - Enriquecimiento de datos
+  La migración y transformación de los datos desde la base RAW a la base STAGING se realizó en las siguientes etapas:
+
+  1. **[Creación de tablas en STAGING](queries/staging/3-creacion_tablas_stagging.sql):**  
+     Se crearon las tablas necesarias en el esquema `staging` utilizando el script `3-creacion_tablas_stagging.sql`.
+
+  2. **[Creación de tabla calendario](queries/staging/4-creacion_tabla_calendario.sql):**  
+     Se generó una tabla de calendario para enriquecer los datos con información temporal, utilizando el script `4-creacion_tabla_calendario.sql`.
+
+  3. **Limpieza de datos:**  
+     Se limpiaron y transformaron los datos de las tablas migradas, eliminando valores nulos, inconsistencias y aplicando normalizaciones. Los datos rechazados se registraron en tablas separadas con el motivo del rechazo.  
+     Este proceso se realizó en las siguientes etapas:
+
+     - **[Limpieza de datos de clientes](queries/staging/5.1-limpia_clientes.sql):**  
+       Se validaron y normalizaron los datos de la tabla `clientes`, asegurando que los correos electrónicos sean válidos y eliminando inconsistencias.
+
+     - **[Limpieza de datos de productos](queries/staging/5.2-limpia_productos.sql):**  
+       Se validaron y normalizaron los datos de la tabla `productos`, asegurando que los precios sean positivos y estén dentro de un rango aceptable.
+
+  Estas transformaciones aseguran que los datos estén listos para su análisis y posterior carga en la base de datos Datawarehouse.
 
 ### 3. Carga
 

@@ -52,6 +52,14 @@ CREATE TABLE IF NOT EXISTS staging.productos (
   precio       numeric(14,2)
 );
 
+CREATE TABLE IF NOT EXISTS staging.productos_rechazados (
+    id_producto text,
+    concepto text,
+    tipo text,
+    precio text,
+    motivo text
+);
+
 -- Proveedores
 CREATE TABLE IF NOT EXISTS staging.proveedores (
   id_proveedor int,
